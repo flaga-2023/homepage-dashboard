@@ -1,0 +1,115 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/latest/configs/services
+
+- Prox 01:
+    - Proxmox:
+        icon: proxmox.png
+          #href: https://192.168.0.140:8006
+        href: https://prox01.local-proxy.duckdns.org
+        description: Network Server - Intel(R) Core(TM) i5-3470T CPU @ 2.90GHz / 16GB Ram
+        widget:
+           type: proxmox
+          #url: https://prox01.local-proxy.duckdns.org
+           url: https://192.168.0.140:8006 
+           username: "{{HOMEPAGE_VAR_PROXMOX1_TOKEN_ID}}"
+           password: "{{HOMEPAGE_VAR_PROXMOX1_TOKEN_SECRET}}"
+           node: prox
+    - PiHole:
+        icon: pi-hole.svg
+        #href: http://192.168.0.121/admin
+        href: https://pi-hole.local-proxy.duckdns.org/admin
+        description: DNS Server
+        widget:
+          type: pihole
+          url: http://192.168.0.121
+          key: "{{HOMEPAGE_VAR_PIHOLE_KEY}}"
+    - Wireguard:
+        icon: wireguard.svg
+        description: Wireguard VPN (no GUI)
+    - HomeAssistant:
+        icon: home-assistant.svg
+        href: http://homeassistant.local:8123/
+        description: Homeassistant
+    - HomePageServer:
+          icon: docker.svg
+          #href: http://192.168.0.123:3000
+          href: https://homepage.local-proxy.duckdns.org
+          description: Docker tests - HomePage dashboard
+- Prox 02:
+    - Proxmox:
+        icon: proxmox.png
+          #href: https://192.168.0.141:8006
+        href: https://prox02.local-proxy.duckdns.org
+        description: Workplace Server / Ansible / K3S - Intel(R) Core(TM) i7-4790 CPU @ 3.60GHz / 16GB Ram
+        widget:
+          type: proxmox
+          #url: https://prox02.local-proxy.duckdns.org
+          url: https://192.168.0.141:8006 
+          username: "{{HOMEPAGE_VAR_PROXMOX2_TOKEN_ID}}"
+          password: "{{HOMEPAGE_VAR_PROXMOX2_TOKEN_SECRET}}"
+          node: prox02
+    - Immich:
+        icon: immich.svg
+        #href: http://192.168.0.127:2283/
+        href: https://immich.local-proxy.duckdns.org
+        description: poze din telefon
+        widget:
+           type: immich
+           url: http://192.168.0.127:2283
+           key: "{{HOMEPAGE_VAR_IMMICHKEY}}"
+    - NgnixProxyManager:
+        icon: nginx-proxy-manager.svg
+        href: https://local-proxy.duckdns.org
+        description: Ngnix Proxy Manager
+    - Bitwarden:
+        icon: bitwarden.svg
+        #href: https://192.168.0.204/
+        href: https://bitwarden.local-proxy.duckdns.org
+        description: Bitwarden Password Manager
+    - Vikunja:
+        icon: vikunja.svg
+        #href: https://192.168.0.206/
+        href: https://vikunja.local-proxy.duckdns.org
+        description: To-Do App (Task management) 
+- TrueNas:
+    - Truenas:
+        icon: truenas.svg
+        href: http://192.168.0.150/
+        description: Storage + Apps - Intel(R) Core(TM) i5-6500 CPU @ 3.20GHz / 16GB Ram
+        widget:
+          type: truenas
+          url: http://192.168.0.150
+          username: "{{HOMEPAGE_VAR_TRUENASUSER}}" # not required if using api key
+          password: "{{HOMEPAGE_VAR_TRUENASPASS}}" # not required if using api key
+    - FileBrowser:
+        icon: filebrowser.svg
+        #href: http://192.168.0.150:30044
+        href: https://filebrowser.local-proxy.duckdns.org
+        description: Share File online
+    - Syncthing:
+        icon: syncthing.svg
+        href: https://syncthing.local-proxy.duckdns.org
+        description: Syncthing files syncing tool
+    - Plex:
+        icon: plex.png
+        #href: http://192.168.0.150:32400/
+        href: https://plex.local-proxy.duckdns.org
+        description: Media Server
+        widget:
+           type: plex
+           url: http://192.168.0.150:32400
+           key: "{{HOMEPAGE_VAR_PLEXTOKEN}}"
+    - PiwiGo:
+        icon: piwigo.svg
+        #href: http://192.168.0.150:30066
+        href: https://piwigo.local-proxy.duckdns.org
+        description: Poze din aparat
+    - Deluge:
+         icon: deluge.svg
+        #href: http://192.168.0.150:30038
+         href: https://torrent.local-proxy.duckdns.org
+         widget:
+           type: deluge
+           url: http://192.168.0.150:30038
+           password: "{{HOMEPAGE_VAR_DELUGEPASS}}"
