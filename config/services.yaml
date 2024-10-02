@@ -62,11 +62,11 @@
         icon: nginx-proxy-manager.svg
         href: https://local-proxy.duckdns.org
         description: Ngnix Proxy Manager
-    - Bitwarden:
-        icon: bitwarden.svg
-        #href: https://192.168.0.204/
-        href: https://bitwarden.local-proxy.duckdns.org
-        description: Bitwarden Password Manager
+ #   - Bitwarden:
+ #       icon: bitwarden.svg
+ #       #href: https://192.168.0.204/
+ #       href: https://bitwarden.local-proxy.duckdns.org
+ #       description: Bitwarden Password Manager
     - Vikunja:
         icon: vikunja.svg
         #href: https://192.168.0.206/
